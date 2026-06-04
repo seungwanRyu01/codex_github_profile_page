@@ -19,10 +19,14 @@ GitHub Pages에 바로 배포할 수 있는 정적 개발자 포트폴리오입�
 
 ## GitHub Pages 배포
 
-1. 변경 사항을 GitHub 저장소에 push합니다.
+이 저장소는 GitHub Actions 워크플로우로 Pages 배포를 자동화합니다.
+
+1. 변경 사항을 `main` 브랜치에 push합니다.
 2. GitHub 저장소의 `Settings`로 이동합니다.
-3. `Pages` 메뉴에서 branch를 `main`, folder를 `/root`로 설정합니다.
-4. 저장 후 표시되는 GitHub Pages URL로 접속해 CSS, JS, 이미지 경로가 정상인지 확인합니다.
+3. `Pages` 메뉴에서 source를 `GitHub Actions`로 설정합니다.
+4. `.github/workflows/deploy-pages.yml` 워크플로우가 실행된 뒤 표시되는 GitHub Pages URL로 접속합니다.
+
+수동 재배포가 필요하면 GitHub의 `Actions` 탭에서 `Deploy GitHub Pages` 워크플로우를 `Run workflow`로 실행할 수 있습니다.
 
 ## 로컬 확인
 
